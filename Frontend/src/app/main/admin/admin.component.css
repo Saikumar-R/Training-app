@@ -1,0 +1,14 @@
+/* *{
+    margin: 0 3.2% 0 3.2%;
+    text-align: justify;
+} */
+.table-responsive{
+    padding: 0 3.5%;
+}
+.table{
+    border: 2px solid #dee2e6;
+}
+.table-responsive .input-group input:focus{
+    box-shadow: none;
+    border: 1px solid #ced4da
+}

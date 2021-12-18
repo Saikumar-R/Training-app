@@ -1,0 +1,51 @@
+[
+    {
+        "courseNo":1,
+        "courseId":"bfrdg1",
+        "courseTitle":"Frontend (HTML5, CSS3, Javascript)",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":2,
+        "courseId":"bfrdg2",
+        "courseTitle":"JQuery",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":3,
+        "courseId":"bfrdg3",
+        "courseTitle":"Angular",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":4,
+        "courseId":"bfrdg4",
+        "courseTitle":"React JS",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":5,
+        "courseId":"bfrdg5",
+        "courseTitle":"Java",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":6,
+        "courseId":"bfrdg6",
+        "courseTitle":"Python",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":7,
+        "courseId":"bfrdg7",
+        "courseTitle":"Artificial Intelligence",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    },
+    {
+        "courseNo":8,
+        "courseId":"bfrdg8",
+        "courseTitle":"Machine Learning",
+        "courseDescription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+    }
+
+]

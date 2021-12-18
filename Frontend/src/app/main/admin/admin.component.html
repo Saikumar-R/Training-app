@@ -1,0 +1,31 @@
+<div class="table-responsive">
+  <div class="input-group mb-2 col-5 p-0">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchData" autocomplete="off" placeholder="Search by Name, Email, Mobile No, College or Address">
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile No</th>
+          <th scope="col">Name of College/University</th>
+          <th scope="col">Address of College/University</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userDatas$ | async | filter:searchData">
+          <th scope="row">{{ user.id }}</th>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.number }}</td>
+          <td>{{ user.collegename }}</td>
+          <td>{{ user.collegeaddress }}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>

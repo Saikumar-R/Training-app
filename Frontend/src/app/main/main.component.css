@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+   }
+
+/* header starts */
+
+.main-container .header,
+footer .copy-rights{
+    background-color: #40A8C4;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.main-container .header .contact-numbers{
+    margin-bottom: 0 !important;
+    padding: 7px 0;
+    cursor: pointer;
+}
+.contact-numbers svg {
+    position: relative;
+    top: -2px;
+}
+
+/* header end */
+
+.loginBasedAlert{
+    background-color: rgb(240, 236, 39);
+}
+
+/* navbar start */
+.navbar,
+footer{
+    background-color: #07689F;
+}
+
+@media (min-width: 992px){
+   .nav-link, .navbar-light .navbar-nav .nav-item{
+        font-size: 117%;
+        font-weight: bold;
+    }
+    .main-container .navbar{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .navbar .logo,
+    .nav-link, 
+    .navbar-light .navbar-nav .nav-item{
+        margin-right: 20px;
+    }
+}
+
+.active , .navbar-light .navbar-nav .nav-link:hover {
+    border-bottom: 3px solid rgb(8, 8, 8);
+    width: fit-content;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link{
+    color: #fff;
+    font-weight: normal;
+}
+@media(max-width:992px){
+    .navbar .lg-login, .navbar .lg-logout{
+         display: none;
+     }
+ }
+
+/* navbar end */
+
+/*Login Modal*/
+
+.modal-body #invalidCredentials{
+    font-size: 13px;
+    background-color: rgb(253, 116, 116);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+/*Login Modal End*/
+
+/* body start */
+.body{
+    min-height: 100%;
+    padding: 2% 2% 0 2%;
+}
+/* body end */
+
+/* footer start */
+footer{
+    width: 100%;
+    color: black;
+    left: 0px;
+    right: 0px;
+}
+
+footer .footer-content{
+    padding:2% 8% 4% 8%;;
+}
+
+.smallscreen-footer .accordion-item button{
+    background-color:rgb(117, 141, 250) ;
+    color: #fff;
+}
+
+.smallscreen-footer .accordion-body{
+    background-color: #fff;
+}
+
+footer .copy-rights{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+}
+
+.copy-rights p{
+    position: relative;
+    top: 6px;
+    bottom: 0px;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+footer p, footer span, footer a{
+    color: #fff;
+} 
+@media(max-width:992px){
+    .footer-content .footer_block .row .largeDevices{
+        display: none;
+    }
+    footer .footer-content{
+        padding:0 0 4% 0;;
+    }
+}
+@media(min-width:992px){
+    .footer-content .footer_block .smallscreen-footer, .sm-logout{
+        display: none !important;
+    }
+}
+
+/* footer end */

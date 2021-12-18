@@ -1,0 +1,31 @@
+.wrapper{
+    margin: 0 3.2% 0 3.2%;
+}
+#accordionExample .card a span{
+    position: relative;
+    top: 1.5px;
+}
+.bi-plus-circle , .bi-dash-circle{
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    width: 16px;
+    height: 16px;
+    color: #0d6efd !important;
+}
+.bi-plus-circle{
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+}
+.bi-dash-circle {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+   
+}
+.mat-expansion-panel .mat-expansion-panel-header{
+    background-color: #fcfcfc;
+    border: 2px solid #d9dbda;
+    border-radius: 5px;
+}
+.content-aside .card{
+    min-height: 100%;
+}

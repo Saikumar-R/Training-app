@@ -1,0 +1,24 @@
+.wrapper{
+    background-color: rgb(24, 20, 20);
+    min-height: 100vmin;
+}
+.wrapper .register-form{
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.banner-image iframe{
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:768px){
+    .banner-image iframe, .wrapper .register-form{
+        position: relative;
+        left: 2%;
+    }
+    .banner-image iframe{
+        height: 330px;
+    }
+}

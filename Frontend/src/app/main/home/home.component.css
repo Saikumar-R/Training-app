@@ -1,0 +1,7 @@
+.carouselInterval{
+    padding:0 !important;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 300px;
+}

@@ -1,0 +1,63 @@
+<div class="wrapper">
+    <div class="row d-flex justify-content-between col-md-12 col-sm-12 col-lg-12">
+        <div class="banner-image col-md-6 col-lg-6 col-sm-12">
+            <img src="../../assets/images/beauty-box (1).png" alt="" srcset="" width="40%" class="mt-3">
+            <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+        <div class="register form mt-3 mb-3 pt-3 pb-3 register-form col-md-6 col-lg-6 col-sm-12 align-self-center">
+            <form class="" #registerForm="ngForm">
+              <!-- {{registerForm.valid}} -->
+                <div class="form-group">
+                    <label for="user-name">User name</label>
+
+                    <input type="text" class="form-control" id="user-name" aria-describedby="usernameHelp" name="name" [(ngModel)]="registerModel.name" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" required>
+
+                    <small class="text-danger" [class.d-none]="name.valid || name.untouched">Please enter User name</small>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="registerModel.email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required>
+
+                  <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please enter Email id</small>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile number</label>
+
+                    <input type="number" class="form-control" id="mobile-number" aria-describedby="mobileNumberHelp" name="number" [(ngModel)]="registerModel.number" #number="ngModel" [class.is-invalid]="number.invalid && number.touched" required pattern="^\d{10}$">
+
+                    <small class="text-danger" [class.d-none]="number.valid || number.untouched">Please Mobile number</small>
+                  </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="registerModel.password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required>
+
+                  <small class="text-danger" [class.d-none]="password.valid || password.untouched">Please create your Password</small>
+                </div>
+                <div class="form-group">
+                    <label for="college">Name of College/University</label>
+
+                    <input type="text" class="form-control" id="college" aria-describedby="collegeHelp" name="collegename" [(ngModel)]="registerModel.collegename" #collegename="ngModel" [class.is-invalid]="collegename.invalid && collegename.touched" required>
+
+                    <small class="text-danger" [class.d-none]="collegename.valid || collegename.untouched">Please enter Name of the college</small>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address of College/University</label><br>
+
+                    <textarea id="address" class="form-control" name="w3review" rows="4" cols="50" name="collegeaddress" [(ngModel)]="registerModel.collegeaddress" #collegeaddress="ngModel" [class.is-invalid]="collegeaddress.invalid && collegeaddress.touched" required>
+                    </textarea>
+
+                    <small class="text-danger" [class.d-none]="collegeaddress.valid || collegeaddress.untouched">Please enter College address</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3" [disabled]="registerForm.invalid" (click)="registerUser()">Register</button>
+                
+                <div class="text-center pt-3 pb-3">
+                  Already Have an Account ? <a routerLink="/main/home" class="font-weight-bold">Login</a>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

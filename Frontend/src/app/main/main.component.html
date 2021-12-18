@@ -1,0 +1,259 @@
+<div class="main-container">
+    <!-- header starts -->
+    <div class="header">
+      <div class="contact-info">
+        <div class="d-flex">
+          <div class="d-flex">
+            <h3 class="contact-numbers text-white fon-weight-bold mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              +91 9182946927
+            </h3>
+            <h3 class="contact-numbers text-white fon-weight-bold">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              +91 7842701076
+            </h3>
+          </div>
+          <div class="ml-auto">
+            <h2 class="contact-numbers text-white fon-weight-bold" data-toggle="modal" data-target="#login-modal"  *ngIf="!isAuthenticated">
+              Login
+            </h2>
+            <div class="dropdown" *ngIf="isAuthenticated">
+              <h2 class="dropdown-toggle contact-numbers text-white" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+                {{ "Hi" + " " + userName}}
+              </h2>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                <a class="dropdown-item" href="#" (click)="logout()" routerLinkActive="active-link" routerLink="/login">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- header end -->
+
+  <!-- Login Based Alert -->
+  <!-- <div class="loginBasedAlert mb-2" [class.d-none]="isAuthenticated">
+    <marquee behavior="scroll" direction="left" scrollamount="3" class="pt-1" >Please Login to access all the Tabs (ex:Trainings, Placements & About)</marquee>
+  </div> -->
+  <!-- Login Based Alert End -->
+  
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="logo" href="#"><img src="../../assets/images/logo.png" alt="" srcset="" width="71px"></a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="trainings" routerLinkActive="active" >Online Trainings</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="placements" routerLinkActive="active">Consulting</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="work" routerLinkActive="active">Work With us</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active">Contact us</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link"routerLink="admin" routerLinkActive="active"  [class.d-none]="!isAdmin || !isAuthenticated">Admin</a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
+  <!-- Navbar end -->
+  
+  <!-- login modal -->
+  
+  <div  class="modal fade" id="login-modal"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header card-header">
+          <h5 class="modal-title">Login</h5>
+          <button #closebutton type="button" class="close" data-dismiss="modal" aria-label="Close" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Invalid Email and password alert start -->
+
+          <div class="text-white pb-1 pt-1 text-center" [class.d-none]="!checkCredentials" id="invalidCredentials">
+            <span style="position: relative; top: -1px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
+                <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+              </svg>
+            </span>
+
+            Entered Email or Password is incorrect, Please enter Valid Credentials.
+          </div>
+
+          <!-- Invalid Email and password alert end -->
+
+
+          <form #loginForm="ngForm">
+            <!-- {{loginForm.valid}} -->
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="loginUserModel.email" #email="ngModel" required [class.is-invalid]="email.invalid && email.touched">
+              <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please enter email id</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="loginUserModel.password" #password="ngModel" required  [class.is-invalid]="password.invalid && password.touched">
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">Please enter password</small>
+            </div>
+
+            <div class="form-group form-check">
+              <div class="row col-md-12 col-sm-12 pl-0 pr-0 pb-3">
+                <div class="remember col-4">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="rememberMe" [(ngModel)]="loginUserModel.rememberMe" #password="ngModel">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <div class="forgot-pw col-6">
+                    <a href="/forgot-password" class="text-body">Forgot your password?</a>
+                </div>
+              </div>
+            </div>
+
+            <button   type="submit" class="btn btn-success" [disabled]="loginForm.invalid" value="submit" (click)="loginUser()">Login</button>
+
+          </form>
+
+        </div>
+
+        <div class="text-center pt-3 pb-3 card-footer">
+            Don't Have an Account yet ? <a href="/register" class="font-weight-bold">Register</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- login modal end -->
+  
+  <!-- Body content start-->
+  <div class="body mb-3">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- Body content end-->
+  
+  <!-- Footer start -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer_block">
+          <div class="row">
+            <div class="covering-areas col-md-3 col-sm-3 col-xl-3  largeDevices">
+              <h1>Online Job Support</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </div>
+            <div class="covering-areas col-md-3 col-sm-3 col-xl-3  largeDevices">
+              <h1>Quick Links</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </div>
+            <div class="covering-areas col-md-3 col-sm-3 col-xl-3  largeDevices">
+              <h1>Popular Links</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </div>
+            <div class="covering-areas col-md-3 col-sm-3 col-xl-3 largeDevices">
+              <h1>Get in Touch</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </div>
+            
+          </div>
+
+          <!-- For small screen devices -->
+
+          <div class="smallscreen-footer">
+            <div class="accordion accordion-flush" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sm-logout bg-light pl-3" *ngIf="isAuthenticated">
+          <a  class="d-inline-flex" (click)="logout()" routerLinkActive="active-link" routerLink="/login" style="position:relative; top:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" class="text-dark"/>
+            </svg>
+            <p class="pl-2 text-dark" style="position: relative; top: 2px;">Logout</p>
+          </a>
+        </div>
+        <div class="copy-rights">
+          <div class="copy-rights_content text-center">
+             <p>All copy rights are belongs to xyz</p>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+  <!-- Footer end -->
+  
+  <!-- modal start -->
+  </div>

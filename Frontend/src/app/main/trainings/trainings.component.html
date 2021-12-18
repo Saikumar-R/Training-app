@@ -1,0 +1,49 @@
+<div class="row wrapper">
+    <div class="col-md-9 col-sm-12 pl-0" *ngIf="courseDetails.length">
+        <!-- {{defaultOpen()}} -->
+        <a href="javascript:void(0)" class="card-link d-flex justify-content-end mb-3" id="expandCollapse" (click)="expandCollapse()">Expand All</a>
+        
+        <!-- first accordion default open -->
+        <mat-accordion *ngFor="let courseDetail of courseDetails | slice:0:1 " class="mb-3">
+           
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false" id="defaultOpenAccordion" expanded="true" class="mb-3">
+              <mat-expansion-panel-header style="height: 48px;" >
+                <mat-panel-title>
+                    {{ courseDetail.courseTitle }}
+                </mat-panel-title> 
+              </mat-expansion-panel-header>
+              <p>{{ courseDetail.courseDescription }}</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <!-- first accordion default open end -->
+
+        <!-- All accordions default close expect first -->
+            <mat-accordion *ngFor="let courseDetail of courseDetails | slice:1 ">
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false" class="mb-3">
+                  <mat-expansion-panel-header >
+                    <mat-panel-title>
+                        {{ courseDetail.courseTitle }}
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>{{ courseDetail.courseDescription }}</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <!-- All accordions default close expect first end-->
+    </div>
+    <div class="col-md-3 col-sm-12 pr-0 content-aside">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Most Popular Courses</h5>
+              <div *ngFor="let courseDetail of courseDetails">
+                <a href="#" class="card-link">{{ courseDetail.courseTitle }}</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- {{ courseDetail.courseTitle }}
+{{ courseDetail.courseDescription }}
+{{ courseDetail.courseNo }} -->
